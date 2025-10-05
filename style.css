@@ -1,0 +1,523 @@
+/* --- Light Mode Palette --- */
+:root {
+    --primary: #4B97C0;
+    /* biru lembut */
+    --secondary: #144425;
+    /* hijau gelap */
+    --accent: #46953D;
+    /* hijau daun */
+    --soft: #B5D984;
+    /* hijau muda */
+    --muted: #82D1C5;
+    /* aqua lembut */
+    --bg-light: #ffffff;
+    --bg-soft: #F9FAFB;
+    --bg-accent: #f0fdf4;
+    /* hijau pastel lembut */
+}
+
+/* Global smooth transition */
+body {
+    transition: background 0.4s ease, color 0.4s ease;
+    background: var(--bg-light);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Typography */
+h2,
+h3,
+h4 {
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+p {
+    color: #333;
+}
+
+/* Product Cards */
+.product-card {
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Button style */
+.btn-primary {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background: #357A2A;
+    transform: translateY(-2px);
+}
+
+/* === DARK MODE === */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode p {
+    color: #cccccc;
+}
+
+/* Navbar */
+body.dark-mode header {
+    background-color: rgba(18, 18, 18, 0.9);
+    color: #e0e0e0;
+}
+
+body.dark-mode header a {
+    color: #e0e0e0;
+}
+
+body.dark-mode header a:hover {
+    color: var(--muted);
+}
+
+/* Hero */
+#hero p {
+    color: var(--secondary);
+    /* lebih kontras di light mode */
+}
+
+body.dark-mode #hero {
+    background-color: #1E1E1E;
+}
+
+body.dark-mode #hero h2 {
+    color: var(--muted);
+}
+
+body.dark-mode #hero p {
+    color: #cccccc;
+}
+
+/* Alternating Sections Dark Mode */
+body.dark-mode section:nth-of-type(odd) {
+    background-color: #2b2b2b;
+    /* abu-abu gelap */
+}
+
+body.dark-mode section:nth-of-type(even) {
+    background-color: #1a1a1a;
+    /* hitam lembut */
+}
+
+/* Product Card Dark Mode */
+body.dark-mode .product-card {
+    background-color: #1E1E1E;
+    border: 1px solid #2c2c2c;
+}
+
+body.dark-mode .product-card h4 {
+    color: var(--soft);
+}
+
+body.dark-mode .product-card p {
+    color: #cccccc;
+}
+
+/* Services Card */
+.service-card,
+#services .p-6 {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service-card:hover,
+#services .p-6:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode #services .p-6 {
+    background-color: #1E1E1E;
+    color: #e0e0e0;
+}
+
+/* Gallery */
+#gallery img {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode #gallery img {
+    filter: brightness(0.9);
+    border: 2px solid #2c2c2c;
+}
+
+/* Testimonials */
+#testimonials .bg-white {
+    background-color: #fff;
+}
+
+body.dark-mode #testimonials .bg-white {
+    background-color: #1E1E1E;
+    color: #e0e0e0;
+}
+
+/* CTA */
+section.bg-green-600 {
+    background-color: var(--accent);
+}
+
+section.bg-green-600 a {
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+section.bg-green-600 a:hover {
+    transform: translateY(-2px);
+}
+
+body.dark-mode section.bg-green-600 {
+    background-color: var(--secondary);
+    color: #e0e0e0;
+}
+
+body.dark-mode section.bg-green-600 a {
+    background-color: #e0e0e0;
+    color: var(--secondary);
+}
+
+body.dark-mode section.bg-green-600 a:hover {
+    background-color: #cccccc;
+}
+
+/* CART MODAL STYLE */
+#cartModal .cart-summary {
+    background-color: #f5f5f5;
+    /* cream eco */
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+#cartModal .cart-summary p {
+    color: #0B2B26;
+    /* hijau tua readable */
+    font-size: 15px;
+}
+
+#cartModal .cart-summary p span {
+    font-weight: 600;
+}
+
+#cartModal .cart-summary p.total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2E8B57;
+    /* hijau eco aksen */
+}
+
+/* Tombol tutup */
+#closeCart {
+    background-color: #B23B3B;
+    /* merah hangat */
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#closeCart:hover {
+    background-color: #8B2323;
+}
+
+/* Tombol checkout */
+#checkoutBtn {
+    background-color: #0B2B26;
+    /* hijau tua utama */
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#checkoutBtn:hover {
+    background-color: #2E8B57;
+    /* hijau eco aksen */
+}
+
+/* Footer */
+footer {
+    background-color: #0f0f0f;
+    color: #e0e0e0;
+}
+
+footer input {
+    border: none;
+}
+
+body.dark-mode footer {
+    background-color: #0f0f0f;
+}
+
+body.dark-mode footer input {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+
+body.dark-mode footer button {
+    background-color: var(--accent);
+}
+
+body.dark-mode footer button:hover {
+    background-color: #356f2f;
+}
+
+/* Animation fade-up */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Styling Cart */
+.cart-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.cart-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart-items {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: #fafafa;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-details h4 {
+    margin: 0 0 5px;
+}
+
+.item-details input {
+    width: 50px;
+    padding: 4px;
+    text-align: center;
+}
+
+.item-total {
+    font-weight: bold;
+    color: #333;
+}
+
+.cart-summary {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart-summary h3 {
+    margin-top: 0;
+}
+
+.cart-summary p {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+.grand-total {
+    font-size: 18px;
+    font-weight: bold;
+    color: #22c55e;
+}
+
+/* Container utama cart */
+.cart-container {
+    background: #ffffff;
+    /* putih bersih */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    /* bayangan halus */
+    max-width: 800px;
+    margin: 30px auto;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Judul cart */
+.cart-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+/* Item di cart */
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+/* Detail produk */
+.item-details {
+    flex: 1;
+    color: #34495e;
+}
+
+.item-details h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.item-details p {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+}
+
+/* Quantity + harga */
+.item-qty-price {
+    text-align: right;
+}
+
+.item-qty {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 4px 10px;
+    margin-bottom: 6px;
+}
+
+.item-price {
+    font-weight: 600;
+    color: #27ae60;
+}
+
+/* Bagian total */
+.cart-summary {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.cart-summary p {
+    font-size: 1rem;
+    margin: 6px 0;
+}
+
+.cart-summary strong {
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+/* Tombol checkout */
+.checkout-btn {
+    background: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.checkout-btn:hover {
+    background: #219150;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .item-qty-price {
+        text-align: left;
+        margin-top: 10px;
+    }
+}
+
+.checkout-btn {
+    width: 100%;
+    background: #22c55e;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.checkout-btn:hover {
+    background: #16a34a;
+}
