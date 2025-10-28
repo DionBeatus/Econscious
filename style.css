@@ -261,6 +261,10 @@ body.dark-mode section.bg-green-600 a:hover {
 footer {
     background-color: #0f0f0f;
     color: #e0e0e0;
+
+    P {
+        color: white;
+    }
 }
 
 footer input {
